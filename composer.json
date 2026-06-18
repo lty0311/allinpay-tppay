@@ -1,0 +1,35 @@
+{
+    "name": "feihu/allinpay-tppay",
+    "description": "通联支付(通企付)PHP SDK - 支持微信、支付宝等支付方式",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "虎哥",
+            "email": "290052621@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-openssl": "*",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AllinPay\\Sdk\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "keywords": [
+        "allinpay",
+        "tppay",
+        "通企付",
+        "通联支付",
+        "wechatpay",
+        "alipay",
+        "微信支付",
+        "支付宝"
+    ]
+}
