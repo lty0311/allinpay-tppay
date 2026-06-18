@@ -20,14 +20,16 @@ $config = [
     'signType' => 'MD5',                    // 签名类型: MD5/RSA/SM2
     'mchNo' => 'YOUR_MCH_NO',               // 商户号
     'appId' => 'YOUR_APP_ID',               // 应用ID
-    'md5Key' => 'YOUR_MD5_KEY',             // MD5密钥
+    'md5Key' => 'your_md5_key_here',        // MD5密钥
+    'priRsaKey' => 'your_private_key_here', // RSA私钥
+    'pubRsaKey' => 'your_public_key_here',  // RSA公钥
     'notifyUrl' => 'https://your-domain.com/notify.php', // 回调地址
 ];
 
 $tqPay = new TqPay($config);
 
 // 微信主扫下单
-$result = $tqPay->wxNative('1.00', '会员充值');
+$result = $tqPay->wxNative('1', '会员充值'); // 这里的金额单位是分
 
 if ($result['code'] == '0') {
     $payData = $result['payData']; // 支付链接，用于生成二维码
